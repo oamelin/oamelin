@@ -20,6 +20,7 @@ public class HolaMundo {
         System.out.print("Ingresa tu nombre ");
         nombre = leer.next();
         System.out.println("mi nombre es "+nombre+" y estoy aprendiendo java");
+        System.out.println("mi nombre es "+nombre+" y estoy aprendiendo java");
                 
     }
     
