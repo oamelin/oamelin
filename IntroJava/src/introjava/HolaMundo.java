@@ -21,7 +21,7 @@ public class HolaMundo {
         nombre = leer.next();
         System.out.println("mi nombre es "+nombre+" y estoy aprendiendo java");
         System.out.println("mi nombre es "+nombre+" y estoy aprendiendo java");
-                
+                 
     }
     
 }
