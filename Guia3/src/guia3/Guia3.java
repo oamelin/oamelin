@@ -26,11 +26,14 @@ public class Guia3 {
         switch(op)
         {
             case 1:
-                ejemplo6;
+                ejemplo6();
                 break;
                 
         }
         System.out.println("");
     }
-    
+    public static void ejemplo6 (){
+        
+    }
+            
 }
