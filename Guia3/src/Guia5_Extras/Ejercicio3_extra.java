@@ -1,21 +1,38 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+Crear una función rellene un vector con números aleatorios, pasándole un 
+arreglo por parámetro. Después haremos otra función o procedimiento que 
+imprima el vector.
+*/
 package Guia5_Extras;
 
-/**
- *
- * @author Oscar
- */
+import java.util.Scanner;
+
 public class Ejercicio3_extra {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        int[] vec;
+        System.out.println("Se pasara a la Funcion carga ");
+        vec=rellenar();
+        System.out.println("Vector resultado");
+        for(int elem:vec){
+            System.out.print(elem+"");
+        }
+            System.out.print("");
+    }
+
+    public static int[] rellenar() {
+        Scanner leer=new Scanner(System.in);
+        System.out.print("Ingrese el tamaño del vector: ");
+        int dim=leer.nextInt();
+        int[] vec=new int[dim];
+        for(int i=0;i<vec.length;i++){
+            vec[i]=(int) (Math.random()*10);
+        }
+        for(int elem:vec){
+            System.out.print(elem+" ");
+        }
+            System.out.println("");
+            return vec;
     }
     
 }
