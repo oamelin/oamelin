@@ -13,11 +13,9 @@ public class Ejercicio3_extra {
         int[] vec;
         System.out.println("Se pasara a la Funcion carga ");
         vec=rellenar();
-        System.out.println("Vector resultado");
-        for(int elem:vec){
-            System.out.print(elem+"");
-        }
-            System.out.print("");
+        System.out.println("Pasar el vector resultado a imprimir ");
+        imprimir(vec);
+        System.out.println(" FIN ");
     }
 
     public static int[] rellenar() {
@@ -33,6 +31,13 @@ public class Ejercicio3_extra {
         }
             System.out.println("");
             return vec;
+    }
+
+    private static void imprimir(int[] vec) {
+        for(int elem:vec){
+            System.out.print(elem+" ");
+        }
+            System.out.println("");
     }
     
 }

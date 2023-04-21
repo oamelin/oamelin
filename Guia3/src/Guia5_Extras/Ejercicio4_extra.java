@@ -6,41 +6,41 @@ public class Ejercicio4_extra {
 
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
-        float[][] alumnos = new float[3][5];
-        for(int i = 0;i<3;i++){
+        float[][] alumnos = new float[10][5];
+        for(int i = 0;i<10;i++){
             System.out.println("Alumno "+i);
             for(int j=0;j<4;j++){
                 if (j<2) {
                     System.out.println("Nota Parcial ");
-                    alumnos[i][j]=leer.nextFloat();
+                    alumnos[i][j]=(float) Math.random()*10;
                 }else{
                     System.out.println("Nota Practico ");
-                    alumnos[i][j]=leer.nextFloat();
+                    alumnos[i][j]=(float) Math.random()*10;
                 }                 
             }
         }
-        for(int i=0;i<3;i++){
+        for(int i=0;i<10;i++){
             System.out.println("Alumno "+i);
             System.out.print("Notas =>");
             float result =0;
             for(int j=0;j<4;j++){
-                System.out.print(" "+alumnos[i][j]);
+              
                 switch(j)
                 {
                 case 0:
-                    System.out.println("result= "+result);
+                    System.out.println(" result= "+result);
                     result+=alumnos[i][j]*0.10;
                     break;
                 case 1:
-                    System.out.println("result= "+result);
+                    System.out.println(" result= "+result);
                     result+=alumnos[i][j]*0.15;
                     break;
                 case 2:
-                    System.out.println("result= "+result);
+                    System.out.println(" result= "+result);
                     result+=alumnos[i][j]*0.25;
                     break;
                 case 3:
-                    System.out.println("result= "+result);
+                    System.out.println(" result= "+result);
                     result+=alumnos[i][j]*0.50;
                     break;
                 }
@@ -49,7 +49,7 @@ public class Ejercicio4_extra {
             System.out.println(" "+alumnos[i][4]+"; ");
         }
         int ap=0,des=0;
-        for(int i = 0;i<3;i++){
+        for(int i = 0;i<10;i++){
                 if (alumnos[i][4]>=7) {
                     ap++;
                 }else{
