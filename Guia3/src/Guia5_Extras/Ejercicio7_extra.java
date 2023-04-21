@@ -12,13 +12,14 @@ public class Ejercicio7_extra {
         Scanner leer = new Scanner (System.in);
         System.out.println("Ingrese el numero para calcular la secuancia de Fibonacci: ");
         int nro=leer.nextInt();
-        int result=fibo(nro);
+        int result=0;
+        result= fibo(nro);
         System.out.println("La seriees "+result);
         
     }
 
     public static int fibo(int n){
-       int numeros;
+       int numeros = 0;
 
        for(int i = 2; i < n; i++)
        {
@@ -27,5 +28,5 @@ public class Ejercicio7_extra {
 
        return numeros;
     }
-    
+
 }
