@@ -1,21 +1,31 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+        Fibonacci
  */
 package Guia5_Extras;
 
-/**
- *
- * @author Oscar
- */
+import java.util.Scanner;
+
 public class Ejercicio7_extra {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner leer = new Scanner (System.in);
+        System.out.println("Ingrese el numero para calcular la secuancia de Fibonacci: ");
+        int nro=leer.nextInt();
+        int result=fibo(nro);
+        System.out.println("La seriees "+result);
+        
+    }
+
+    public static int fibo(int n){
+       int numeros;
+
+       for(int i = 2; i < n; i++)
+       {
+          numeros = fibo(i - 1)+ fibo(i - 2);
+       }
+
+       return numeros;
     }
     
 }

@@ -10,18 +10,11 @@ import java.util.Random;
 
 public class Ejercicio6_extra {
 
-
     public static void main(String[] args) {
         Random rand = new Random();
         Scanner leer = new Scanner(System.in);
         String palabra;
         String[][] sopa= new String[20][20];
-        System.out.println("///////////  MATRIZ SOPA DE LETRAS ////////    ");
-        for(int i=0;i<20;i++){
-            for(int j=0;j<20;j++){
-                System.out.print(sopa[i][j]+" ");
-            }
-        }
         System.out.println("Ingresar 5 palabras de entre 3 y 5 caracteres");
         int cont=0;
         while (cont<5){
@@ -61,7 +54,7 @@ public class Ejercicio6_extra {
                 }
             }
         }
-        System.out.println("///////////  MATRIZ SOPA DE LETRAS ////////    ");
+        System.out.println("///////  MATRIZ SOPA DE LETRAS ////////    ");
         for(int i=0;i<20;i++){
             for(int j=0;j<20;j++){
                 System.out.print(sopa[i][j]+" ");
