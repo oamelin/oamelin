@@ -42,7 +42,11 @@ public class Ejercicio1_poo {
         System.out.println("ISBN "+libro.ISBN+
                 " Titulo: "+libro.Titulo
         +" Autor: "+libro.Autor+" Nro de Pagiomas:"+libro.numPag);
-        
+        System.out.println("Metodos geter");
+        System.out.println("Autor :"+libro.getAutor());
+        System.out.println("ISBN: "+libro.getISBN());
+        System.out.println("Nro PAguinas: "+libro.getNumPag());
+        System.out.println("Titulo: "+libro.getTitulo());
     }
       
 }
