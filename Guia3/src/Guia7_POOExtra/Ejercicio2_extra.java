@@ -19,5 +19,6 @@ public class Ejercicio2_extra {
         System.out.println("La distancia que hay entre los dos puntos es "+distancia1.distancia());
 
     }
-    
+ 
+   
 }
