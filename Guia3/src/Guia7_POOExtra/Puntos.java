@@ -1,7 +1,3 @@
-/*
-
-*/
-
 
 package Guia7_POOExtra;
 
