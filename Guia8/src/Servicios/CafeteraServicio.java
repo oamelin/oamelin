@@ -5,10 +5,6 @@
  */
 package Servicios;
 
-/**
- *
- * @author Oscar
- */
 public class CafeteraServicio {
     
 }
