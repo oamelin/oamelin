@@ -1,22 +1,33 @@
 
-public class Programa_Nespresso {
 
+import Entidades.Cafetera;
+import Servicios.CafeteraServicio;
+import java.util.Scanner;
+
+public class Programa_Nespresso {
     
     public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        Cafetera cf = new Cafetera();
+        CafeteraServicio scf = new CafeteraServicio();    
+        System.out.println("Capacidad Maxima= "+cf.getCapacidadMáxima()+" "
+                           +"Capacidad Actual= "+cf.getCantidadActual());
+
+        System.out.println("llenar la Cafetera");
+        scf.llenarCafetera(cf);
+        System.out.println("Capacidad Maxima= "+cf.getCapacidadMáxima()+" "
+                           +"Capacidad Actual= "+cf.getCantidadActual());
+        System.out.println("Servir cafe ");
+        System.out.println("Estado de la cafetera:"+cf.getCantidadActual());
+        System.out.print("Capacidad de la taza");
+        scf.servirTaza(leer.nextInt(),cf);
+        System.out.println("Estado de la cafetera:"+cf.getCantidadActual());
+        scf.servirTaza(leer.nextInt(),cf);
+        System.out.println("Estado de la cafetera:"+cf.getCantidadActual());
         
     }
     
 }
 
 
- Crear clase CafeteraServicio en el paquete Servicios con los siguiente:
-Método llenarCafetera(): hace que la cantidad actual sea igual a la capacidad 
-máxima. 
-Método servirTaza(int): se pide el tamaño de una taza vacía, el método recibe 
-el tamaño de la taza y simula la acción de servir la taza con la capacidad 
-indicada. Si la cantidad actual de café “no alcanza” para llenar la taza, se 
-sirve lo que quede. El método le informará al usuario si se llenó o no la taza, 
-y de no haberse llenado en cuanto quedó la taza.
-Método vaciarCafetera(): pone la cantidad de café actual en cero. 
-Método agregarCafe(int): se le pide al usuario una cantidad de café, el método 
-lo recibe y se añade a la cafetera la cantidad de café indicada.
+ 

@@ -1,7 +1,7 @@
 package Entidades;
 
 public class Cafetera {
-    private int capacidadMáxima; /// (la cantidad máxima de café que puede contener la cafetera)
+    private int capacidadMáxima = 20 ; /// (la cantidad máxima de café que puede contener la cafetera)
     private int cantidadActual; /// (la cantidad actual de café que hay en la cafetera)
 
     public Cafetera() {
