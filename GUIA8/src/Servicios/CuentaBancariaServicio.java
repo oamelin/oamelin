@@ -53,8 +53,5 @@ public void consultarSaldo(CuentaBancaria c){
 }
 public void consultarDatos(CuentaBancaria c){
     System.out.println("----Los datos de la cuenta -----");
-    c.toString();
-}
-
-    
-}
+    System.out.println("numeroCuenta=" + c.getNumeroCuenta()+",dniCliente= "+ c.getDniCliente()+", saldoActual=" + c.getSaldoActual() );
+}}

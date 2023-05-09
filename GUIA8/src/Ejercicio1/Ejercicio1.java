@@ -20,6 +20,7 @@ public class Ejercicio1 {
         cta1=scb.crearCuenta();
         scb.consultarSaldo(cta1);
         scb.consultarDatos(cta1);
+        
 
     }
     

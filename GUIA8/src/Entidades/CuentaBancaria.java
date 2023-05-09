@@ -33,12 +33,4 @@ public class CuentaBancaria {
     public void setSaldoActual(long saldoActual) {
         this.saldoActual = saldoActual;
     }
-
-    @Override
-    public String toString() {
-        return "numeroCuenta=" + this.getNumeroCuenta()+ ", dniCliente=" + this.getDniCliente() + ", saldoActual=" + this.getSaldoActual() ;
-    }
-    
-    
-
 }
