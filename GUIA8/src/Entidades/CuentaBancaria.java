@@ -35,9 +35,10 @@ public class CuentaBancaria {
     }
 
     @Override
-    public void toString() {
-        System.out.println("DNI: "+this.getDniCliente()+"\nCuenta: "+this.getNumeroCuenta()
-                +"\nSaldo: "+this.getSaldoActual()); 
+    public String toString() {
+        return "numeroCuenta=" + this.getNumeroCuenta()+ ", dniCliente=" + this.getDniCliente() + ", saldoActual=" + this.getSaldoActual() ;
     }
+    
+    
 
 }

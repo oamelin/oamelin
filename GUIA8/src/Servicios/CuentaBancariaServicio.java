@@ -51,8 +51,9 @@ public void extraccionRapida(CuentaBancaria c, long importe){
 public void consultarSaldo(CuentaBancaria c){
     System.out.println("El saldo de la cuenta es: "+c.getSaldoActual());
 }
-public void consultarDatos(){
-    
+public void consultarDatos(CuentaBancaria c){
+    System.out.println("----Los datos de la cuenta -----");
+    c.toString();
 }
 
     
