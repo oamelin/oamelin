@@ -34,29 +34,10 @@ public class CuentaBancaria {
         this.saldoActual = saldoActual;
     }
 
-    public con getParámetros() {
-        return parámetros;
+    @Override
+    public void toString() {
+        System.out.println("DNI: "+this.getDniCliente()+"\nCuenta: "+this.getNumeroCuenta()
+                +"\nSaldo: "+this.getSaldoActual()); 
     }
-
-    public void setParámetros(con parámetros) {
-        this.parámetros = parámetros;
-    }
-
-    public con getGetters() {
-        return getters;
-    }
-
-    public void setGetters(con getters) {
-        this.getters = getters;
-    }
-
-    public y getSetters() {
-        return setters;
-    }
-
-    public void setSetters(y setters) {
-        this.setters = setters;
-    }
-.
 
 }

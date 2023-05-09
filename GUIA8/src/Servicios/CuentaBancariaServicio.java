@@ -6,22 +6,54 @@
 package Servicios;
 
 import Entidades.CuentaBancaria;
+import java.util.Scanner;
 
 /**
  *
  * @author CECI
  */
 public class CuentaBancariaServicio {
+    Scanner leer=new Scanner(System.in).useDelimiter("\n");
     CuentaBancaria scb = new CuentaBancaria();
-    public void crearCuenta(CuentaBancaria c){
-        System.out.println("");
-        
+    public CuentaBancaria crearCuenta(){
+        System.out.print("Ingresar DNI: ");
+        scb.setDniCliente(leer.nextLong());
+        System.out.print("Ingresar Nro de Cuenta;");
+        scb.setNumeroCuenta(leer.nextInt());
+        System.out.println("Ingresar Saldo Actual: ");
+        scb.setSaldoActual(leer.nextLong());
+        return scb;
     }
-    Método para crear cuenta pidiéndole los datos al usuario.
-Método ingresar(double): recibe una cantidad de dinero a ingresar y se le sumará al saldo actual.
-Método retirar(double): recibe una cantidad de dinero a retirar y se le restara al saldo actual. Si la cuenta no tiene la cantidad de dinero a retirar se retirará el máximo posible hasta dejar la cuenta en 0.
-Método extraccionRapida: le permitirá sacar solo un 20% de su saldo. Validar que el usuario no saque más del 20%.
-Método consultarSaldo: permitirá consultar el saldo disponible en la cuenta.
-Método consultarDatos: permitirá mostrar todos los datos de la cuenta.
 
+public void ingresar(CuentaBancaria c,long importe){
+    c.setSaldoActual(c.getSaldoActual()+importe);
+}
+
+public void retirar(CuentaBancaria c,long importe){
+    long result = c.getSaldoActual();
+    if (result < importe ){
+        System.out.println("Se retiro: "+c.getSaldoActual());
+        c.setSaldoActual(0);
+    }else{
+        System.out.println("Se retira: "+importe);
+        c.setSaldoActual(c.getSaldoActual()-importe);
+    }
+}
+public void extraccionRapida(CuentaBancaria c, long importe){
+    if (importe > (c.getSaldoActual()*0.20)){
+        System.out.println("No se puede realizarla extraición\n Ingrese un monto menor");
+    }else{
+        System.out.println("Se retiro: "+importe);
+        c.setSaldoActual(c.getSaldoActual()-importe);
+        System.out.println("Saldo en la cuenta: "+c.getSaldoActual());
+    }
+}
+public void consultarSaldo(CuentaBancaria c){
+    System.out.println("El saldo de la cuenta es: "+c.getSaldoActual());
+}
+public void consultarDatos(){
+    
+}
+
+    
 }
