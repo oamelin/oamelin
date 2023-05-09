@@ -1,10 +1,12 @@
+package Ejercicio2;
+
 
 
 import Entidades.Cafetera;
 import Servicios.CafeteraServicio;
 import java.util.Scanner;
 
-public class Programa_Nespresso {
+public class Ejercicio2 {
     
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
