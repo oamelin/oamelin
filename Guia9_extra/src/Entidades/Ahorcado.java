@@ -1,7 +1,8 @@
 package Entidades;
+import java.util.Arrays;
 
 public class Ahorcado {
-    private String[] palabra;
+    private String palabra[];
     private int letras_encontradas;
     private int cantidadMaximas;
 
@@ -12,8 +13,9 @@ public class Ahorcado {
         return palabra;
     }
 
-    public void setPalabra(String[] palabra) {
-        this.palabra = palabra;
+    public void setPalabra(String p[]) {
+        this.palabra = new String[p.length];
+        Arrays.fill(this.palabra,p);
     }
 
     public int getLetras_encontradas() {
