@@ -4,18 +4,19 @@
  * and open the template in the editor.
  */
 package Guia9_extra2;
-
+import Servicios.AhorcadoService;
 /**
  *
  * @author Oscar
  */
-public class AhoracadoS {
+public class AppAhorcados {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        AhorcadoService ah1 = new AhorcadoService();
+        ah1.juego();
     }
     
 }
