@@ -3,7 +3,7 @@ package Guia9_extra2;
 
 import java.util.Scanner;
 
-public class Ahorcado {
+public class AppAhorcado {
     private char[] palabra;
     private boolean[] encontradas;
     private int maxJugadas;
@@ -79,7 +79,7 @@ public class Ahorcado {
         }
     }
     public static void main(String[] args) {
-        Ahorcado ahorcado = new Ahorcado();
+        AppAhorcado ahorcado = new AppAhorcado();
         ahorcado.juego();
     }
 }
