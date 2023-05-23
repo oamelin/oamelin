@@ -10,7 +10,9 @@ public class Ahorcado {
     private int encontradas;
     private int intentos;
 
+    public Ahorcado(){}
     public Ahorcado(String[] palabra, int intentos) {
+        
         this.palabra = palabra;
         this.intentos = intentos;
     }
