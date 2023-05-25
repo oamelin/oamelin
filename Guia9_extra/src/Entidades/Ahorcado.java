@@ -8,6 +8,7 @@ package Entidades;
 public class Ahorcado {
     private String palabra[];
     private int encontradas;
+    private boolean encontrada[];
     private int intentos;
 
     public Ahorcado(){}
@@ -15,6 +16,7 @@ public class Ahorcado {
         
         this.palabra = palabra;
         this.intentos = intentos;
+        this.encontrada= new boolean[palabra.length];
     }
 
     public String[] getPalabra() {
@@ -23,6 +25,15 @@ public class Ahorcado {
 
     public void setPalabra(String[] palabra) {
         this.palabra = palabra;
+        this.encontrada= new boolean[palabra.length];
+    }
+
+    public boolean[] getEncontrada() {
+        return encontrada;
+    }
+
+    public void setEncontrada(int i ,boolean encontrada) {
+        this.encontrada[i] = encontrada;
     }
 
     public int getEncontradas() {
