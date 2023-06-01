@@ -8,6 +8,7 @@ package guia10;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
@@ -82,6 +83,13 @@ public class Guia10 {
         TreeMap<Integer,String> personasB = new TreeMap();
         //Ejemplo de un LinkedHashMap de personas;
         LinkedHashMap<Integer, String> personasC = new LinkedHashMap();
+        
+        ArrayList<String> lista = new ArrayList();
+        lista.add("A");
+        lista.add("B");
+        lista.add("C");
+        //creamos el interator para recorrer la lista 
+        Iterator iteraro = lista.iterator();
         
     }
     
