@@ -13,11 +13,14 @@ public class Guia10_4 {
 
     
     public static void main(String[] args) {
+        SerPelicula sp = new SerPelicula();
         
+        sp.cargaPelicula();
+        sp.mostrarPeliculas();
     }
     
 }
-
+/*
 Un cine necesita implementar un sistema en el que se puedan cargar peliculas. Para esto,
 tendremos una clase Pelicula con el título, director y duración de la película (en horas).
 Implemente las clases y métodos necesarios para esta situación, teniendo en cuenta lo
@@ -37,4 +40,4 @@ pantalla.
 • Ordenar las películas de acuerdo a su duración (de menor a mayor) y mostrarlo en
 pantalla.
 • Ordenar las películas por título, alfabéticamente y mostrarlo en pantalla.
-• Ordenar las películas por director, alfabéticamente y mostrarlo en pantalla.
+• Ordenar las películas por director, alfabéticamente y mostrarlo en pantalla.*/

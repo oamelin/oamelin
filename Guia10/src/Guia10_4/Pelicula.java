@@ -35,6 +35,12 @@ public class Pelicula {
     }
     public Pelicula() {
     }
+
+    @Override
+    public String toString() {
+        return "Pelicula{" + "t\u00edtulo=" + título + ", director=" + director + ", duraci\u00f3n=" + duración + '}';
+    }
+    
 }
 
 

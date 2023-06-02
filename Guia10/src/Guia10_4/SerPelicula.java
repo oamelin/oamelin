@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class SerPelicula {
     ArrayList<Pelicula> peliculas = new ArrayList();
     
-    public void cargaPelicula(ArrayList p ){
+    public void cargaPelicula( ){
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
         String título;
         String director;
@@ -21,15 +21,18 @@ public class SerPelicula {
             director = leer.next();
             System.out.print("Duracion; ");
             duracion=leer.nextDouble();
-            p.add(new Pelicula(título,director,duracion));
+            Pelicula p;
+            p = new Pelicula(título,director,duracion);
+            peliculas.add(p);
             System.out.println("Continuar la carga ");
             if( leer.next().equalsIgnoreCase("n") ){
                 break;}
         }while (true);
     }
     public void mostrarPeliculas(){
-        for (Pelicula p : peliculas) {
-            System.out.println(p);
+        for (Iterator<Pelicula> it = peliculas.iterator(); it.hasNext();) {
+            Pelicula p = it.next();
+            System.out.println(p.toString());
         }
     }
 }
