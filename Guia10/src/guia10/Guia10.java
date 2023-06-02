@@ -26,7 +26,7 @@ public class Guia10 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //ejemplos de un arraylist de numeros:
+       /* //ejemplos de un arraylist de numeros:
         ArrayList<Integer> numerosA = new ArrayList();
         int x = 20;
         numerosA.add(x); //agrega numero en el arrays indice 0
@@ -83,14 +83,38 @@ public class Guia10 {
         TreeMap<Integer,String> personasB = new TreeMap();
         //Ejemplo de un LinkedHashMap de personas;
         LinkedHashMap<Integer, String> personasC = new LinkedHashMap();
-        
+        */
         ArrayList<String> lista = new ArrayList();
         lista.add("A");
         lista.add("B");
         lista.add("C");
         //creamos el interator para recorrer la lista 
-        Iterator iteraro = lista.iterator();
+        Iterator iteraror = lista.iterator(); //devolvemos el iterador
+        System.out.println("Elementos de la lista: ");
+        while ( iteraror.hasNext() ){
+            System.out.println(iteraror.next() + " ");
+        }
+        System.out.println();
         
+        // LISTAS   
+        ArrayList<String> palabra = new ArrayList<>();
+        Iterator<String> it = palabra.iterator();
+        palabra.add("Cafe");
+        palabra.add("hola");
+        palabra.add("te");
+        while ( it.hasNext()){
+            if( it.next().equals("Hola")){ // borramos si esta la palabra holra
+                it.remove();
+            }
+        }
+        //CONJUNTOS 
+        HashSet<Integer> numeroSet=new HashSet<>();
+        Iterator<Integer> it2 = numeroSet.iterator();
+        while ( it2.hasNext()){
+            if ( it2.next() == 3 ){
+                it2.remove();
+            }
+        }
     }
     
 }

@@ -13,7 +13,7 @@ public class Guia10_4 {
 
     
     public static void main(String[] args) {
-        // TODO code application logic here
+        
     }
     
 }
