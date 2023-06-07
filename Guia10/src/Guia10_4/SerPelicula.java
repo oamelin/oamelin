@@ -35,10 +35,17 @@ public class SerPelicula {
             System.out.println(p.toString());
         }
     }
+
+    void pelisxtiempo() {
+        System.out.println("Peliculas que superan la hora de reproducción ");
+        for (Pelicula p : peliculas){
+            
+        }
+    }
 }
 
 /*
-• Mostrar en pantalla todas las películas.
+
 • Mostrar en pantalla todas las películas con una duración mayor a 1 hora.
 • Ordenar las películas de acuerdo a su duración (de mayor a menor) y mostrarlo en
 pantalla.
