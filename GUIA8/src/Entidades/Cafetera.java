@@ -7,6 +7,10 @@ public class Cafetera {
     public Cafetera() {
     }
 
+    public Cafetera(int cantidadActual) {
+        this.cantidadActual = cantidadActual;
+    }
+
     public int getCapacidadMáxima() {
         return capacidadMáxima;
     }

@@ -6,26 +6,58 @@
 package Servicios;
 
 import Entidades.Persona;
+import java.util.HashSet;
+import java.util.Scanner;
 
 /**
  *
  * @author CECI
  */
 public class PersonaServicio {
+    Scanner leer = new Scanner(System.in).useDelimiter("\n");
     Persona p= new Persona();
+    
+public void crearPersona(Persona p) {
+    System.out.println("Ingresar Datos de la Persona");
+    System.out.print("Nombre: ");
+    p.setNombre(leer.nextLine());
+    System.out.print("Edad; ");
+    p.setEdad(leer.nextInt());
+    System.out.print("Peso: ");
+    p.setPeso(leer.nextDouble());
+    System.out.print("Altura: ");
+    p.setAltura(leer.nextDouble());
+    String op;
+        do
+        {
+            System.out.print("Ingrese sexo (H-M-O): ");
+            op=leer.next().toUpperCase();
+        }while (!(op.equals("H") || op.equals("M") || op.equals("O")));
+        leer.nextLine();
+        p.setSexo(op);
+//    return p;
+} 
     public boolean esMayorDeEdad(Persona p){
+        if (p.getEdad() > 18){
+            System.out.println("Es mayor de Edad");
+        }else{
+            System.out.println("No es mayor de Edad");}
         return p.getEdad() > 18;
     } 
-public Persona crearPersona(){
-     
     
-} el método crear persona, le pide los valores de los atributos al usuario y después se le asignan a sus respectivos atributos para llenar el objeto Persona. Además, comprueba que el sexo introducido sea correcto, es decir, H, M o O. Si no es correcto se deberá mostrar un mensaje
-
-
-Método calcularIMC(): calculara si la persona está en su peso ideal (peso en kg/(altura^2 en mt2)).
-Si esta fórmula da por resultado un valor menor que 20, significa que la persona está por debajo de su peso ideal 
-y la función devuelve un -1. Si la fórmula da por resultado un número entre 20 y 25 (incluidos), 
-significa que la persona está en su peso ideal y la función devuelve un 0. Finalmente, si el resultado de la fórmula es un valor mayor que 25 significa que la persona tiene sobrepeso, y la función devuelve un 1.
-
-    
+    public int calcularIMC(Persona p){
+        double result= p.getPeso()/(p.getAltura()*p.getAltura());
+        if (result > 25){
+            System.out.println("Sobrepeso");
+            return 1;
+        }else{
+            if (result > 20 ){
+                System.out.println("Peso ideal");
+                return 0;
+            }else{
+                System.out.println("por debajo de su peso ideal");
+                return -1;
+            }
+        }
+    }
 }
