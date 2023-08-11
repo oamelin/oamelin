@@ -14,7 +14,6 @@ public class Direccion {
     @Id
     @GeneratedValue(generator = "uuid")
     private String id;
-
     private String pais;
     private String provincia;
 
